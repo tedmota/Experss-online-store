@@ -1,0 +1,213 @@
+---
+import Cta from "@components/ctaCurso.astro"
+import Logo from "@components/logo.astro"
+
+import copyImg from "@assets/praia.jpg"
+import garantia15 from "@assets/garantia15dias.webp"
+import Check from "@assets/icons/roundCheckmark.astro"
+import LogoSvg from "@assets/icons/siteIcon.astro"
+
+let title = "Método Sites Relâmpago | COPA"
+let description = "Aprenda a criar sites super rápidos pagando zero de hospedagem. Descubra aqui o exato passo a passo que nós usamos para criar sites rápidos, seguros, escaláveis, rápidos de fazer e… gratuitos!"
+let pageUrl = new URL(Astro.url.pathname, Astro.site)
+
+---
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <!-- Global Metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        <!-- Primary Meta Tags -->
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={pageUrl} />
+    </head>
+
+    <body>
+
+        <main class="text-xl [&>section]:px-4">
+
+            <!-- Promessa, Título e Subpromessa -->
+            <section id="promessa-e-subpromessa" class="py-10 text-center [&>*]:md:mx-auto [&>*]:md:mb-12 md:bg-gradient-to-br md:from-gray-900 md:to-base-100" data-theme="dark">
+                <div class="md:pb-2 md:max-w-screen-md md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500">Aprenda a criar sites super rápidos pagando zero de hospedagem</div>
+                <h1 class="md:text-7xl text-5xl font-bold tracking-wide mb-8 text-primary">Método Sites Relâmpago</h1>
+                <p class="md:max-w-screen-md text-primary mb-8">Descubra aqui o exato passo a passo que nós usamos para criar sites rápidos, seguros, escaláveis, rápidos de fazer e… gratuitos!</p>
+                <Cta>Quero aprender agora!</Cta>
+            </section>
+
+            <!-- Ancoragem de Preço -->
+            <section id="ancoragem-de-preco" class="md:pb-32 py-6 text-center">
+                <p class="text-4xl font-extrabold uppercase mb-2 text-red-600">de <span class="line-through">R$ 97,00</span></p>
+                <p class="font-semibold uppercase mb-2">por apenas</p>
+                <p class="text-8xl font-black uppercase mb-4 text-green-600">R$ 10</p>
+                <p class="text-2xl font-bold uppercase mb-8">- risco zero! -</p>
+                <div class="divider my-4"></div>
+            </section>
+        
+            <!-- Copy Inicial -->
+            <section id="copy-inicial" class="py-6 leading-relaxed [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
+                <h2 class="text-2xl font-bold mb-4">Caro(a) Leitora(a)…</h2>
+                <p>Estou muito feliz que você está aqui. Sério mesmo. Eu me lembro de quando eu comecei a fazer sites, lembro dos perrengues... e eu queria muito que naquela época houvesse algo assim.</p>
+                <p>Uma forma direta, sem gambiarras, sem rodeios, de fazer um site perfeito.</p>
+                <p>Perfeito não só no design, mas na segurança, na velocidade, na escalabilidade para aguentar picos de tráfego.</p>
+                <p>Quem trabalha com isso sabe muito bem do que eu estou falando: quando dinheiro custa um dia de um site fora do ar por causa de um <em>ataque na base de dados</em> ou de uma <em>quebra de plugin</em>? </p>
+                <p>Quanto dinheiro se perde por usuários abandonarem uma página de vendas por conta do tempo de carregamento em dispositivos móveis?</p>
+                <p>Aliás, o Google mesmo já pesquisou e nos traz um dado alarmante: se o tempo de carregamento da sua página for de 5 segundos, a probabilidade de um visitante <b>abandonar a sua página</b> DOBRA, em relação à mesma página demorando 1 segundo para carregar.</p>
+                <p>Ou seja, você gastou dinheiro atraindo o visitante, e ele simplesmente abandona a sua página.</p>
+                <p>Infelizmente, ainda há muitos sites que ainda sofrem desses problemas, especialmente aqueles que usam a plataforma de criação de sites mais famosa do mundo: o Wordpress.</p>
+                
+                <h3 class="text-2xl font-bold mt-8 mb-4">Mas eu vim para trazer boas notícias:</h3>
+                
+                <p>Agora não apenas existe uma solução para esses problemas, como para a maioria dos sites, ela é gratuita.</p>
+                <p>Você nem mesmo vai precisar se preocupar em contratar uma hospedagem.</p>
+                <p>É isso: no lugar de pagar uma fortuna com servidores, hoje em dia é possível fazer sites profissionais e perfeitos <b>de graça</b>.</p>
+                <p class="mb-12">E eu quero te ensinar o método e as tecnologias para fazer essas páginas que batem a <b>nota máxima</b> dos testes do Google (ou em qualquer outro teste):</p>
+                <img src={copyImg} alt="Substituit pelo Texto Alternativo da Foto" class="shadow-lg rounded-lg">
+            </section>
+
+            <!-- Produto e Checklist com Benefícios -->
+            <section id="produto-checklist" class="py-12 [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
+                <h2 class="md:text-2xl md:mb-8 text-center font-bold mb-4 uppercase text-primary">Método Sites Relâmpago ⚡</h2>
+
+                <h3 class="md:text-4xl text-3xl text-center font-bold mb-4 text-black">A estratégia e as ferramentas para fazer sites profissionais ultra-rápidos e de custo zero</h3>
+
+                <ul class="md:p-8 md:text-black border-2 border-dashed p-2 mb-8 rounded-xl font-semibold [&>li]:flex [&>li]:items-center [&>li]:mb-4">
+                    <li><Check/><div>Como aumentar a conversão de uma Landing Page sem alterar copy ou design?</div></li>
+                    <li><Check/><div>Como fazer sites gratuitos?</div></li>
+                    <li><Check/><div>Como fazer sites impossíveis de cair, mesmo com picos de tráfego?</div></li>
+                    <li><Check/><div>Como instalar um modelo de site com apenas um clique?</div></li>
+                    <li><Check/><div>Como aprender o básico de desenvolvimento web para rapidamente se colocar no mercado?</div></li>
+                </ul>
+
+                <p><u>É exatamente isso</u> que você vai aprender no Método Sites Relâmpago.</p>
+                <p class="text-2xl">Se você nunca fez um site, você já vai começar <b>pelas técnicas mais modernas e seguras.</b></p>
+                <p class="text-2xl">E se você já faz sites, você vai <b>aumentar as suas conversões enquanto diminui os seus custos.</b></p>
+            </section>
+
+            <!-- Nesse curso você vai ter -->
+            <section id="funcionalidades" class="py-12 md:pt-20 md:pb-32 leading-relaxed bg-gradient-to-b from-gray-800 to-gray-900" data-theme="dark">
+                <h2 class="md:mb-20 md:text-5xl text-4xl font-bold tracking-wide mb-8 text-center text-primary">O que você vai encontrar aqui?</h2>
+                <div class="flex flex-col gap-8 justify-center md:flex-row md:flex-wrap">
+                    <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100 text-white">
+                        <span class="text-3xl mb-2">🛠️</span>
+                        <h3 class="text-2xl font-semibold mb-2">Setup das Plataformas</h3>
+                        <p>Vou te guiar no setup da sua estrutura de desenvolvimento, para que você tenha um bom ambiente de trabalho digital.</p>
+                    </div>
+                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                        <span class="text-3xl mb-2">🚀</span>
+                        <h3 class="text-2xl font-semibold mb-2">Seu modelo de site no ar com um clique</h3>
+                        <p>Você vai ganhar um modelo de código: será a base da aula e a base da sua jornada de desenvolvimento.</p>
+                    </div>
+                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                        <span class="text-3xl mb-2">🔎</span>
+                        <h3 class="text-2xl font-semibold mb-2">Estrutura da Landing Page e Revisão de HTML</h3>
+                        <p>Vamos dissecar as seções da nossa Landing Page, para que nada seja misterioso, e que você consiga criar a partir dali.</p>
+                    </div>
+                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                        <span class="text-3xl mb-2">🎨</span>
+                        <h3 class="text-2xl font-semibold mb-2">Estilo da Página e Tailwind CSS</h3>
+                        <p>Aqui é a hora de começar a modificar o estilo da página e usar esse framework lindo que é o Tailwind CSS.</p>
+                    </div>
+                    <div class="w-full max-w-sm card card-body shadow-2xl bg-base-100 text-white">
+                        <span class="text-3xl mb-2">📱💻</span>
+                        <h3 class="text-2xl font-semibold mb-2">Responsividade</h3>
+                        <p>Alguns simples ajustes para que a sua página não apenas seja perfeita para dispositivos móveis, como também para Desktop.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bônus -->
+            <section id="bonus" class="py-20 lg:pb-32">
+                <h2 class="text-5xl mb-16 text-center font-black text-black">Aulas Bônus</h2>
+                <div class="flex flex-col gap-12 justify-center md:flex-row md:flex-wrap">
+
+                    <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100">
+                    <p class="text-3xl mb-4">📩</p>
+                    <h3 class="text-4xl font-bold mb-6">Formulários Personalizados</h3>
+                    <ul class="[&>li]:flex [&>li]:items-center [&>li]:mb-4">
+                        <li><Check/> Aguenta até 100 respostas gratuitas por mês</li>
+                        <li><Check/> Simples modificação e implementação</li>
+                        <li><Check/> Filtro anti-spam</li>
+                        <li><Check/> Envio das respostas por e-mail ou painel de administração</li>
+                    </ul>
+                    </div>
+
+                    <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100">
+                    <p class="text-3xl mb-4">👩🏾‍💻</p>
+                    <h3 class="text-3xl font-bold mb-6">Setup de Ambiente de Desenvolvimento Local</h3>
+                    <p>Uma aula para você turbinar o seu ambiente de desenvolvimento, para que você perca menos tempo em configurações e aproveite fazendo o que sabe de melhor: criar os seus produtos.</p>
+                    </div>
+
+                </div>
+                
+            </section>
+
+            <!-- Oferta -->
+            <section id="oferta" class="py-12 lg:pb-32" data-theme="dark">
+                
+                <h2 class="text-4xl font-bold tracking-wide mb-20 text-center dark:text-white md:mb-20">Aproveite os últimos dias da promoção:</h2>
+                <div class="px-2 py-8 md:max-w-screen-md md:mx-auto">
+        
+                    <p class="text-2xl text-center font-semibold mb-4 dark:text-white">de <span class="line-through text-red-600">R$ 97,00</span> por</p>
+                    <p class="text-8xl text-center uppercase font-black mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-500">R$ 10</p>
+        
+                    <div class="divider mb-8"></div>
+        
+                    <ul class="md:mb-12 mb-8 [&>li]:flex [&>li]:items-center [&>li]:mb-4">
+                        <li><Check/> Método mais moderno e profissional para fazer sites em 2023</li>
+                        <li><Check/> Automaticamente escalável, sem necessitar de ajustes</li>
+                        <li><Check/> Impossível de cair</li>
+                        <li><Check/> Super Seguro</li>
+                        <li><Check/> Não necessita de base de dados</li>
+                        <li><Check/> Ferramentas gratuitas</li>
+                        <li><Check/> Páginas rápidas, muito rápidas mesmo</li>
+                        <li><Check/> Coloque modelos de site no ar com 1 clique</li>
+                        <li><Check/> Crie sua máquina de produzir Landing Pages e testar produtos</li>
+                    </ul>
+                    
+                    <Cta>Quero começar agora!</Cta>
+        
+                    <p class="text-center text-sm">
+                        Pagamento único.<br>
+                        Oferta especial por tempo limitado, <br> o preço aumentará em breve.
+                    </p>
+            </div>
+                    
+            </section>
+
+            <!-- 15 dias de garantia -->
+            <section id="garantia" class="py-16 md:flex md:gap-12 md:items-center md:max-w-screen-lg md:mx-auto">
+                <!-- <SeloGarantia15dias/> -->
+                <img src={garantia15} alt="Garantia de 15 dias" class="md:mb-0 mb-8 mx-auto" width="240" height="240"/>
+                <div>
+                    <h2 class="md:mb-8 md:text-4xl text-3xl font-bold tracking-wide mb-12 text-black dark:text-white">15 dias de Garantia. <br class="hidden md:inline"> 100% de Satisfação. Risco Zero.</h2>                
+                    <p>Experimente todo o treinamento, e se não for a coisa certa para você, devolvemos 100% do seu dinheiro. Simples e tranquilo.</p>
+                </div>
+            </section>
+
+            <!-- Último CTA -->
+            <section id="ultimo-cta" class="py-32" data-theme="dark">
+                <div class="w-48 mx-auto"><LogoSvg/></div>
+                <h2 class="text-5xl font-bold my-16 text-center text-primary">Destrave o super-poder de fazer sites perfeitos em poucos minutos.</h2>
+                <Cta>Começar agora mesmo</Cta>
+            </section>
+
+        </main>
+        <footer class="text-center pb-12 pt-16 md:pt-40" data-theme="dark">
+            <div class="divider mb-12"></div> 
+            <div class="w-fit mx-auto mb-4">
+                <Logo/>
+            </div> 
+            <!-- <Social/> -->
+            <p class="opacity-80 mb-4">
+                Copyright © 2023 Sua Empresa <br class="md:hidden">
+                CNPJ 00.000.000/0001-00 RAZÃO SOCIAL
+            </p>
+            <p class="opacity-80">Feito com 🧡 e ☀️</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+---
+import Contato from '@components/forms/simples.astro'
+
+let title = "Contato | Nome do seu site aqui"
+let description = "Fale com a gente!"
+let pageUrl = new URL(Astro.url.pathname, Astro.site)
+---
+<!DOCTYPE html>
+<html lang='pt-BR'>
+	<head>
+        <!-- Global Metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        <!-- Primary Meta Tags -->
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={pageUrl} />
+	</head>
+
+	<body>
+        <main class="p-4 mx-auto prose dark:prose-h1:text-primary">
+            <h1>Contato</h1>
+            <p>Estamos felizes que você está aqui!</p>
+            <p>É só mandar a sua mensagem para que nossos especialistas te auxiliem da melhor maneira.</p>
+
+            <Contato />
+
+            <div class="not-prose text-center font-normal underline mb-8">
+                <a href="/" class=""> ← Ou volte para a página incial </a>
+            </div>
+        </main>
+    </body>
+</html>

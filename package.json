@@ -1,0 +1,29 @@
+{
+  "name": "astro-acopa",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^0.1.0",
+    "@astrojs/tailwind": "^3.0.0-beta.1",
+    "@astrojs/vue": "^0.1.5",
+    "@sendgrid/mail": "^7.7.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "astro": "^2.0.10",
+    "daisyui": "^2.15.2",
+    "frete": "^0.4.6",
+    "sanitize-html": "^2.7.0",
+    "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@astrojs/image": "^0.14.1",
+    "@astrojs/mdx": "^0.12.1",
+    "sharp": "^0.31.3",
+    "theme-change": "^2.2.0"
+  }
+}

@@ -1,0 +1,20 @@
+---
+import Layout from '@layouts/page.astro'
+import Desenho from '@assets/icons/siteicon.astro'
+let content = {
+    title: 'Obrigado!',
+    description: 'Recebemos sua mensagem'
+}
+---
+<Layout {content}>
+    <div slot="inicio" class="grid md:grid-cols-3 gap-8 md:w-9/12">
+        <div id="img" class="grid place-content-center place-items-center w-28 md:w-full mx-auto">
+            <Desenho />
+        </div>
+        <div class="text-center md:text-left md:col-span-2">
+            <h1>Obrigado!</h1>
+            <p>Vamos te responder em breve com os próximos passos. Enquanto isso, que tal dar mais uma espiada em nosso site?</p>
+            <a href="/" class="btn btn-primary">Voltar para o Início</a>
+        </div>
+    </div>
+</Layout>
