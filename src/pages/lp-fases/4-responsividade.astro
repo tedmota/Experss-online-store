@@ -1,11 +1,11 @@
 ---
 import Cta from "@components/ctaCurso.astro"
-import Logo from "@components/logo.astro"
+import Check from "@assets/icons/roundCheckmark.astro"
 
 import copyImg from "@assets/praia.jpg"
 import garantia15 from "@assets/garantia15dias.webp"
-import Check from "@assets/icons/roundCheckmark.astro"
-import LogoSvg from "@assets/icons/siteIcon.astro"
+import LogoIcon from "@assets/icons/siteIcon.astro"
+import Logo from "@components/logo.astro"
 
 let title = "Título da Página | Sua Marca"
 let description = "Descrição da página que aparece no google e em outros sistemas. Ideal deixar abaixo de 160 caracteres."
@@ -32,15 +32,15 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
         <main class="text-xl [&>section]:px-4">
 
             <!-- Promessa, Título e Subpromessa -->
-            <section id="promessa-e-subpromessa" class="py-10 text-center [&>*]:md:mx-auto [&>*]:md:mb-12 md:bg-gradient-to-br md:from-gray-900 md:to-base-100" data-theme="dark">
-                <div class="md:pb-2 md:max-w-screen-md md:text-3xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500">Inserir promessa secundária aqui. Ex.: "Aprenda a..."</div>
-                <h1 class="md:text-7xl text-5xl font-bold tracking-wide mb-8 text-primary">Título ou Nome do Método</h1>
-                <p class="md:max-w-screen-md text-primary mb-8">Aqui vai a promessa principal em 2 ou 3 linhas. Ex.: "Descubra o exato passo a passo para..."</p>
+            <section id="promessa-e-subpromessa" class="py-10 text-center" data-theme="dark">
+                <div class="font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500">Inserir promessa secundária aqui. Ex.: "Aprenda a..."</div>
+                <h1 class="text-5xl font-bold tracking-wide mb-8 text-primary">Título ou Nome do Método</h1>
+                <p class="text-primary mb-8">Aqui vai a promessa principal em 2 ou 3 linhas. Ex.: "Descubra o exato passo a passo para..."</p>
                 <Cta>Quero aprender agora!</Cta>
             </section>
 
             <!-- Ancoragem de Preço -->
-            <section id="ancoragem-de-preco" class="md:pb-32 py-6 text-center">
+            <section id="ancoragem-de-preco" class="py-6 text-center">
                 <p class="text-4xl font-extrabold uppercase mb-2 text-red-600">de <span class="line-through">R$ 97,00</span></p>
                 <p class="font-semibold uppercase mb-2">por apenas</p>
                 <p class="text-8xl font-black uppercase mb-4 text-green-600">R$ 10</p>
@@ -49,7 +49,7 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
             </section>
         
             <!-- Copy Inicial -->
-            <section id="copy-inicial" class="py-6 leading-relaxed [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
+            <section id="copy-inicial" class="py-6 leading-relaxed [&>p]:mb-4">
                 <h2 class="text-2xl font-bold mb-4">Caro(a) Leitora(a)…</h2>
                 <p>Aqui começa o texto da carta de vendas.  Cada parágrafo é envolto pelas tags html de parágrafo (começando com "p" e terminando com "/p"). Todas as tags html são envoltas pelos símbolos de menor que ("&lt") e maior que ("&gt")</p>
                 <p>Para destacar os textos, você pode usar <b>negrito</b> usando o elemento "b", da forma que você consegue ver no código. Para <em>itálico</em>, a ideia é semelhante. Basta envolver pelas tags "em" (de <em>emphasis</em>). Para <u>sublinhado</u>, use o "u" de underline.</p>
@@ -57,16 +57,16 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
                 <p>Aqui você pode prosseguir com o copy principal da sua carta de vendas.</p>
                 <p>Seguimos da mesma forma, já provavelmente nos encaminhando para a <b>solução</b>.</p>
                 <p class="mb-12">E eu também quero que você tenha os mesmos resultados, tal qual o Fulano de Tal teve: (aqui você provavelmente vai colocar aguma prova social ou prova do benefício do produto):</p>
-                <img src={copyImg} alt="Substituit pelo Texto Alternativo da Foto" class="shadow-lg rounded-lg">
+                <img src={copyImg} alt="Substituir pelo Texto Alternativo da Foto" class="shadow-lg rounded-lg">
             </section>
 
             <!-- Produto e Checklist com Benefícios -->
-            <section id="produto-checklist" class="py-12 [&>p]:mb-4 md:pb-32 md:max-w-screen-md md:mx-auto">
-                <h2 class="md:text-2xl md:mb-8 text-center font-bold mb-4 uppercase text-primary">Título ou Nome do Método ⚡</h2>
+            <section id="produto-checklist" class="py-12 [&>p]:mb-4">
+                <h2 class="text-center font-bold mb-4 uppercase text-primary">Título ou Nome do Método ⚡</h2>
 
-                <h3 class="md:text-4xl text-3xl text-center font-bold mb-4 text-black">A estratégia e as ferramentas para conseguir xxxxx em menos de 15 dias.</h3>
+                <h3 class="text-3xl text-center font-bold mb-4 text-black">A estratégia e as ferramentas para conseguir xxxxx em menos de 15 dias.</h3>
 
-                <ul class="md:p-8 md:text-black border-2 border-dashed p-2 mb-8 rounded-xl font-semibold [&>li]:flex [&>li]:items-center [&>li]:mb-4">
+                <ul class="border-2 border-dashed p-2 mb-8 rounded-xl font-semibold [&>li]:flex [&>li]:items-center [&>li]:mb-4">
                     <li><Check/><div>Aqui vai uma lista de benefícios para o seu cliente</div></li>
                     <li><Check/><div>Eu gosto de colocar em formas de perguntas</div></li>
                     <li><Check/><div>Para que a minha solução, no próximo parágrafo, seja a resposta a essas perguntas.</div></li>
@@ -80,9 +80,9 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
             </section>
 
             <!-- Nesse curso você vai ter -->
-            <section id="funcionalidades" class="py-12 md:pt-20 md:pb-32 leading-relaxed bg-gradient-to-b from-gray-800 to-gray-900" data-theme="dark">
-                <h2 class="md:mb-20 md:text-5xl text-4xl font-bold tracking-wide mb-8 text-center text-primary">O que você vai encontrar aqui?</h2>
-                <div class="flex flex-col gap-8 justify-center md:flex-row md:flex-wrap">
+            <section id="funcionalidades" class="py-12 leading-relaxed bg-gradient-to-b from-gray-800 to-gray-900" data-theme="dark">
+                <h2 class="text-4xl font-bold tracking-wide mb-8 text-center text-primary">O que você vai encontrar aqui?</h2>
+                <div class="flex flex-col gap-8 justify-center">
                     <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100 text-white">
                         <span class="text-3xl mb-2">🛠️</span>
                         <h3 class="text-2xl font-semibold mb-2">Título do Card</h3>
@@ -114,7 +114,7 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
             <!-- Bônus -->
             <section id="bonus" class="py-20 lg:pb-32">
                 <h2 class="text-5xl mb-16 text-center font-black text-black">Aulas Bônus</h2>
-                <div class="flex flex-col gap-12 justify-center md:flex-row md:flex-wrap">
+                <div class="flex flex-col gap-12 justify-center">
 
                     <div class="w-full max-w-sm p-8 rounded-3xl shadow-2xl bg-base-100">
                     <p class="text-3xl mb-4">📩</p>
@@ -140,15 +140,15 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
             <!-- Oferta -->
             <section id="oferta" class="py-12 lg:pb-32" data-theme="dark">
                 
-                <h2 class="text-4xl font-bold tracking-wide mb-20 text-center dark:text-white md:mb-20">Aproveite os últimos dias da promoção:</h2>
-                <div class="px-2 py-8 md:max-w-screen-md md:mx-auto">
+                <h2 class="text-4xl font-bold tracking-wide mb-20 text-center dark:text-white">Aproveite os últimos dias da promoção:</h2>
+                <div class="px-2 py-8">
         
                     <p class="text-2xl text-center font-semibold mb-4 dark:text-white">de <span class="line-through text-red-600">R$ 97,00</span> por</p>
                     <p class="text-8xl text-center uppercase font-black mb-12 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-lime-500">R$ 10</p>
         
                     <div class="divider mb-8"></div>
         
-                    <ul class="md:mb-12 mb-8 [&>li]:flex [&>li]:items-center [&>li]:mb-4">
+                    <ul class="mb-8 [&>li]:flex [&>li]:items-center [&>li]:mb-4">
                         <li><Check/> Item de Benefício ou Objetivo #1</li>
                         <li><Check/> Item de Benefício ou Objetivo #2</li>
                         <li><Check/> Mais um item de benefício</li>
@@ -171,11 +171,11 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
             </section>
 
             <!-- 15 dias de garantia -->
-            <section id="garantia" class="py-16 md:flex md:gap-12 md:items-center md:max-w-screen-lg md:mx-auto">
+            <section id="garantia" class="py-16">
                 <!-- <SeloGarantia15dias/> -->
-                <img src={garantia15} alt="Garantia de 15 dias" class="md:mb-0 mb-8 mx-auto" width="240" height="240"/>
+                <img src={garantia15} alt="Garantia de 15 dias" class="mb-8 mx-auto" width="240" height="240"/>
                 <div>
-                    <h2 class="md:mb-8 md:text-4xl text-3xl font-bold tracking-wide mb-12 text-black dark:text-white">15 dias de Garantia. <br class="hidden md:inline"> 100% de Satisfação. Risco Zero.</h2>                
+                    <h2 class="text-3xl font-bold tracking-wide mb-12 text-black dark:text-white">15 dias de Garantia. 100% de Satisfação. Risco Zero.</h2>                
                     <p>Experimente todo o curso e veja se é a coisa certa para você. Se não for, devolvemos 100% do seu dinheiro (e a amizade continua).</p>
                 </div>
             </section>
@@ -188,14 +188,13 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
             </section>
 
         </main>
-        <footer class="text-center pb-12 pt-16 md:pt-40" data-theme="dark">
+        <footer class="text-center pb-12 pt-16" data-theme="dark">
             <div class="divider mb-12"></div> 
             <div class="w-fit mx-auto mb-4">
                 <Logo/>
             </div> 
-            <!-- <Social/> -->
             <p class="opacity-80 mb-4">
-                Copyright © 2023 Sua Empresa <br class="md:hidden">
+                Copyright © 2023 Sua Empresa <br>
                 CNPJ 00.000.000/0001-00 RAZÃO SOCIAL
             </p>
             <p class="opacity-80">Feito com 🧡 e ☀️</p>
