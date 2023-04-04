@@ -1,4 +1,106 @@
+---
+import copyImg from "@assets/praia.jpg"
+
+let title = "Título da Página | Sua Marca"
+let description = "Descrição da página que aparece no google e em outros sistemas. Ideal deixar abaixo de 160 caracteres."
+let pageUrl = new URL(Astro.url.pathname, Astro.site)
+
+---
 <!DOCTYPE html>
 <html lang='pt-BR'>
+    <head>
+                <!-- Global Metadata -->
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width" />
+                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+                
+                <!-- Primary Meta Tags -->
+                <title>{title}</title>
+                <meta name="title" content={title} />
+                <meta name="description" content={description} />
+                <link rel="canonical" href={pageUrl} />
+    </head>
+    <body>
+        <main>
+            <!-- 1. Promessa, Título e Subpromessa -->
+            <section id="promessa-e-subpromessa">
+                <div>Inserir promessa secundária aqui. Ex.: "Aprenda a..."</div>
+                <h1>Título ou Nome do Método</h1>
+                <p>Aqui vai a promessa principal em 2 ou 3 linhas. Ex.: "Descubra o exato passo a passo para..."</p>
+                <!-- <Cta>Quero aprender agora!</Cta> -->
+            </section>
+            <!-- 2. Ancoragem de Preço -->
+            <section id="ancoragem-de-preco">
+                <p>de <span>R$ 97,00</span></p>
+                <p>por apenas</p>
+                <p>R$ 10</p>
+                <p>- risco zero! -</p>
+                <div></div>
+            </section>
+            <!-- 3. Copy Inicial -->
+            <section id="carta-de-vendas">
+                <h2>Caro(a) Leitora(a)…</h2>
+                <p>Aqui começa o texto da carta de vendas. Cada parágrafo é envolto pelas tags html de parágrafo (começando com "p" e terminando com "/p"). Todas as tags html são envoltas pelos símbolos de menor que ("&lt") e maior que ("&gt")</p>
+                <p>Para destacar os textos, você pode usar <b>negrito</b> usando o elemento "b", da forma que você consegue ver no código. Para <em>itálico</em>, a ideia é semelhante. Basta envolver pelas tags "em" (de <em>emphasis</em>). Para <u>sublinhado</u>, use o "u" de underline.</p>
 
+                <h3>Subtítulo de Terceiro Nível</h3>
+                <p>Aqui você pode prosseguir com o copy principal da sua carta de vendas.</p>
+                <p>Seguimos da mesma forma, já provavelmente nos encaminhando para a <b>solução</b>.</p>
+                <p>E eu também quero que você tenha os mesmos resultados, tal qual o Fulano de Tal teve: (aqui você provavelmente vai colocar aguma prova social ou prova do benefício do produto):</p>
+
+                <img src={copyImg} alt="Prova Social do Método X">
+            </section>
+
+            <!-- Produto e Checklist com Benefícios -->
+            <section id="produto-checklist">
+                <h2>Título ou Nome do Método ⚡</h2>
+
+                <h3>A estratégia e as ferramentas para conseguir xxxxx em menos de 15 dias.</h3>
+
+                <ul>
+                    <li><!--<Check/>--><div>Aqui vai uma lista de benefícios para o seu cliente</div></li>
+                    <li><!--<Check/>--><div>Eu gosto de colocar em formas de perguntas</div></li>
+                    <li><!--<Check/>--><div>Para que a minha solução, no próximo parágrafo, seja a resposta a essas perguntas.</div></li>
+                    <li><!--<Check/>--><div>Talvez você ache essas perguntas digitando no google e vendo o autocompletar</div></li>
+                    <li><!--<Check/>--><div>Ou pegando algumas inspirações com o ChatGPT, por exemplo</div></li>
+                </ul>
+
+                <p><u>É exatamente isso</u> que você vai aprender no [Nome do seu Método].</p>
+                <p>Se você nunca fez xxxxxxx, vou te ensinar a fazer yyyyyyy em menos de dd dias.</p>
+                <p>E se você já faz xxxxx, você vai conseguir<b>fazer uma coisa nova incrível que te leva ao próximo patamar.</b></p>
+            </section>
+
+            <!-- Nesse curso você vai ter -->
+            <section id="funcionalidades" data-theme="dark">
+                <h2>O que você vai encontrar aqui?</h2>
+                <div id="card-container">
+                    <div>
+                        <span>🛠️</span>
+                        <h3>Título do Card</h3>
+                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
+                    </div>
+                    <div>
+                        <span>🚀</span>
+                        <h3>Título do Card</h3>
+                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
+                    </div>
+                    <div>
+                        <span>🔎</span>
+                        <h3>Título do Card</h3>
+                        <p>Texto do Card, exibindo o aprendizado ou benefício daquele assunto do curso. Acima do título há um emoji.</p>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+        <footer>
+            <!-- Logo -->
+            <p>
+                Copyright © 2023 Sua Empresa
+                CNPJ 00.000.000/0001-00 RAZÃO SOCIAL 
+            </p>
+            <p>Feito com 🧡 e ☀️</p>
+        </footer>
+    </body>
 </html>

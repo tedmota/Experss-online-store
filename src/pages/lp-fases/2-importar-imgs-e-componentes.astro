@@ -1,11 +1,11 @@
 ---
-// import copyImg from "@assets/praia.jpg"
-// import garantia15 from "@assets/garantia15dias.webp"
-// import LogoIcon from "@assets/icons/siteIcon.astro"
-// import Logo from "@components/logo.astro"
+import copyImg from "@assets/praia.jpg"
+import garantia15 from "@assets/garantia15dias.webp"
+import LogoIcon from "@assets/icons/siteIcon.astro"
+import Logo from "@components/logo.astro"
 
-// import Check from "@assets/icons/roundCheckmark.astro"
-// import Cta from "@components/ctaCurso.astro"
+import Check from "@assets/icons/roundCheckmark.astro"
+import Cta from "@components/ctaCurso.astro"
 
 let title = "Título da Página | Sua Marca"
 let description = "Descrição da página que aparece no google e em outros sistemas. Ideal deixar abaixo de 160 caracteres."
@@ -29,14 +29,14 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
 
     <body>
 
-        <main class="text-xl [&>section]:px-4">
+        <main>
 
             <!-- Promessa, Título e Subpromessa -->
             <section id="promessa-e-subpromessa" data-theme="dark">
                 <div>Inserir promessa secundária aqui. Ex.: "Aprenda a..."</div>
                 <h1>Título ou Nome do Método</h1>
                 <p>Aqui vai a promessa principal em 2 ou 3 linhas. Ex.: "Descubra o exato passo a passo para..."</p>
-                <!-- <Cta>Quero aprender agora!</Cta> -->
+                <Cta>Quero aprender agora!</Cta>
             </section>
 
             <!-- Ancoragem de Preço -->
@@ -57,7 +57,7 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
                 <p>Aqui você pode prosseguir com o copy principal da sua carta de vendas.</p>
                 <p>Seguimos da mesma forma, já provavelmente nos encaminhando para a <b>solução</b>.</p>
                 <p>E eu também quero que você tenha os mesmos resultados, tal qual o Fulano de Tal teve: (aqui você provavelmente vai colocar aguma prova social ou prova do benefício do produto):</p>
-                <!-- <img src={copyImg} alt="Substituir pelo Texto Alternativo da Foto"> -->
+                <img src={copyImg} alt="Substituir pelo Texto Alternativo da Foto">
             </section>
 
             <!-- Produto e Checklist com Benefícios -->
@@ -67,11 +67,11 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
                 <h3>A estratégia e as ferramentas para conseguir xxxxx em menos de 15 dias.</h3>
 
                 <ul>
-                    <li><div>Aqui vai uma lista de benefícios para o seu cliente</div></li>
-                    <li><div>Eu gosto de colocar em formas de perguntas</div></li>
-                    <li><div>Para que a minha solução, no próximo parágrafo, seja a resposta a essas perguntas.</div></li>
-                    <li><div>Talvez você ache essas perguntas digitando no google e vendo o autocompletar</div></li>
-                    <li><div>Ou pegando algumas inspirações com o ChatGPT, por exemplo</div></li>
+                    <li><Check/><div>Aqui vai uma lista de benefícios para o seu cliente</div></li>
+                    <li><Check/><div>Eu gosto de colocar em formas de perguntas</div></li>
+                    <li><Check/><div>Para que a minha solução, no próximo parágrafo, seja a resposta a essas perguntas.</div></li>
+                    <li><Check/><div>Talvez você ache essas perguntas digitando no google e vendo o autocompletar</div></li>
+                    <li><Check/><div>Ou pegando algumas inspirações com o ChatGPT, por exemplo</div></li>
                 </ul>
 
                 <p><u>É exatamente isso</u> que você vai aprender no [Nome do seu Método].</p>
@@ -117,14 +117,14 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
                 <div>
 
                     <div>
-                    <p>📩</p>
-                    <h3>Título do Card</h3>
-                    <ul>
-                        <li> Nada impede que você coloque uma lista</li>
-                        <li> Aqui dentro do card mesmo</li>
-                        <li> Talvez você ajuste os <em>"paddings"</em></li>
-                        <li> Para melhorar o visual do card</li>
-                    </ul>
+                        <p>📩</p>
+                        <h3>Título do Card</h3>
+                        <ul>
+                            <li><Check/> Nada impede que você coloque uma lista</li>
+                            <li><Check/> Aqui dentro do card mesmo</li>
+                            <li><Check/> Talvez você ajuste os <em>"paddings"</em></li>
+                            <li><Check/> Para melhorar o visual do card</li>
+                        </ul>
                     </div>
 
                     <div>
@@ -172,7 +172,7 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
 
             <!-- 15 dias de garantia -->
             <section id="garantia">
-                <!-- <img src={garantia15} alt="Garantia de 15 dias" width="240" height="240"/> -->
+                <img src={garantia15} alt="Garantia de 15 dias" width="240" height="240"/>
                 <div>
                     <h2>15 dias de Garantia. 100% de Satisfação. Risco Zero.</h2>                
                     <p>Experimente todo o curso e veja se é a coisa certa para você. Se não for, devolvemos 100% do seu dinheiro (e a amizade continua).</p>
@@ -181,16 +181,16 @@ let pageUrl = new URL(Astro.url.pathname, Astro.site)
 
             <!-- Último CTA -->
             <section id="ultimo-cta" data-theme="dark">
-                <!-- <div><LogoIcon/></div> -->
+                <div><LogoIcon/></div>
                 <h2>Última chamada gigante para fechar a página de um jeito inspirador.</h2>
-                <!-- <Cta>Começar agora mesmo</Cta> -->
+                <Cta>Começar agora mesmo</Cta>
             </section>
 
         </main>
         <footer data-theme="dark">
             <div></div> 
             <div>
-                <!-- <Logo/> -->
+                <Logo/>
             </div> 
             <p>
                 Copyright © 2023 Sua Empresa
